@@ -80,7 +80,7 @@ void GameScene::PauseGame(Ref* pSender)
     
     
     _PauseMenu = Menu::create(bResume, bMenu, bRestart, NULL);
-    _PauseMenu->alignItemsHorizontallyWithPadding(_VisibleSize.width / 10.0f);
+    _PauseMenu->alignItemsHorizontallyWithPadding(_VisibleSize.width / 15.0f);
     _PauseMenu->setPosition(_VisibleSize.width * 0.5f, _VisibleSize.height * 0.5f);
     this->addChild(_PauseMenu, Z_ORDER_MENU);
 }

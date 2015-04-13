@@ -6,6 +6,7 @@
 #ifndef __Tanks__GameScene__
 #define __Tanks__GameScene__
 
+#include "cocos2d.h"
 #include <stdio.h>
 #include "GameConstants.h"
 
