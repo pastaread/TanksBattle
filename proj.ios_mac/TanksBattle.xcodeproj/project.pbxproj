@@ -65,6 +65,10 @@
 		B65C25E51ADB291E00C02237 /* buttonPause.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E01ADB291E00C02237 /* buttonPause.png */; };
 		B65C25E61ADB291E00C02237 /* buttonRestart.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E11ADB291E00C02237 /* buttonRestart.png */; };
 		B65C25E71ADB291E00C02237 /* buttonResume.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E21ADB291E00C02237 /* buttonResume.png */; };
+		B6D758141ADD0DC500C38130 /* Tank.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D758121ADD0DC500C38130 /* Tank.png */; };
+		B6D758151ADD0DC500C38130 /* TankEnemy.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D758131ADD0DC500C38130 /* TankEnemy.png */; };
+		B6D758181ADD0DFA00C38130 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6D758161ADD0DFA00C38130 /* GameObject.cpp */; };
+		B6D7581B1ADD0EC200C38130 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6D758191ADD0EC200C38130 /* Player.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -164,6 +168,12 @@
 		B65C25E01ADB291E00C02237 /* buttonPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPause.png; sourceTree = "<group>"; };
 		B65C25E11ADB291E00C02237 /* buttonRestart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonRestart.png; sourceTree = "<group>"; };
 		B65C25E21ADB291E00C02237 /* buttonResume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonResume.png; sourceTree = "<group>"; };
+		B6D758121ADD0DC500C38130 /* Tank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tank.png; sourceTree = "<group>"; };
+		B6D758131ADD0DC500C38130 /* TankEnemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankEnemy.png; sourceTree = "<group>"; };
+		B6D758161ADD0DFA00C38130 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		B6D758171ADD0DFA00C38130 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		B6D758191ADD0EC200C38130 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		B6D7581A1ADD0EC200C38130 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -286,6 +296,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6D758121ADD0DC500C38130 /* Tank.png */,
+				B6D758131ADD0DC500C38130 /* TankEnemy.png */,
 				B65C25DE1ADB291E00C02237 /* buttonGamePlay.png */,
 				B65C25DF1ADB291E00C02237 /* buttonMainMenu.png */,
 				B65C25E01ADB291E00C02237 /* buttonPause.png */,
@@ -311,6 +323,10 @@
 				B65C25DA1ADB269800C02237 /* GameScene.cpp */,
 				B65C25DB1ADB269800C02237 /* GameScene.h */,
 				B65C25DD1ADB26E300C02237 /* GameConstants.h */,
+				B6D758161ADD0DFA00C38130 /* GameObject.cpp */,
+				B6D758171ADD0DFA00C38130 /* GameObject.h */,
+				B6D758191ADD0EC200C38130 /* Player.cpp */,
+				B6D7581A1ADD0EC200C38130 /* Player.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -477,6 +493,7 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				B6D758151ADD0DC500C38130 /* TankEnemy.png in Resources */,
 				B65C25E61ADB291E00C02237 /* buttonRestart.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -491,6 +508,7 @@
 				B65C25E41ADB291E00C02237 /* buttonMainMenu.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				B6D758141ADD0DC500C38130 /* Tank.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,12 +532,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D7581B1ADD0EC200C38130 /* Player.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				B65C25DC1ADB269800C02237 /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				B6D758181ADD0DFA00C38130 /* GameObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

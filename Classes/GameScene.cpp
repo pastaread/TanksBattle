@@ -51,6 +51,12 @@ bool GameScene::init()
     this->addChild(menu, 1);
     
     InitDefaults();
+    // New begin
+    CreateObjects();
+    setAccelerometerEnabled(true);
+    
+    schedule(schedule_selector(GameScene::update), 0.0167);
+    // New end
     
     return true;
 }
@@ -59,6 +65,95 @@ void GameScene::InitDefaults()
 {
     _GameIsPaused = false;
 }
+
+// New begin
+void GameScene::CreateObjects()
+{
+    _MainPlayer = new Player(1, Vec2(_VisibleSize.width * 0.12f, _VisibleSize.height * 0.12f));
+    this->addChild(_MainPlayer->_Spr, Z_ORDER_PLAYER);
+}
+
+void GameScene::onAcceleration(Acceleration *acc, Event *unused_event)      // Acceleration (Device rotation)
+{
+    if(_GameIsPaused == true ) return;
+    
+    float acceleration = 2.0f;                              // acceleration
+    float maxVelocity = 2;                                  // Max speed
+    
+    _PlayerVelocity.x = acc->x * acceleration;
+    _PlayerVelocity.y = acc->y * acceleration;
+    
+    if (_PlayerVelocity.x > maxVelocity)
+    {
+        _PlayerVelocity.x = maxVelocity;
+    }
+    else if (_PlayerVelocity.x < -maxVelocity)
+    {
+        _PlayerVelocity.x = -maxVelocity;
+    }
+    
+    if (_PlayerVelocity.y > maxVelocity)
+    {
+        _PlayerVelocity.y = maxVelocity;
+    }
+    else if (_PlayerVelocity.y < -maxVelocity)
+    {
+        _PlayerVelocity.y = -maxVelocity;
+    }
+}
+
+void GameScene::updatePosition()                            // Update player position
+{
+    
+    Vec2 pos = _MainPlayer->GetObjectPos();
+    pos.x += _PlayerVelocity.x;
+    pos.y += _PlayerVelocity.y;
+    
+    float imageWidthHalved = 48.0f;
+    float imageHeightHalved = 48.0f;
+    
+    float leftBorderLimit = imageWidthHalved;
+    float rightBorderLimit = _VisibleSize.width - imageWidthHalved;
+    
+    float topBorderLimit = imageHeightHalved;
+    float bottomBorderLimit = _VisibleSize.height - imageHeightHalved;
+    
+    // If out of border, stop player
+    if (pos.x < leftBorderLimit)
+    {
+        pos.x = leftBorderLimit;
+        _PlayerVelocity.x = 0;
+    }
+    else if (pos.x > rightBorderLimit)
+    {
+        pos.x = rightBorderLimit;
+        _PlayerVelocity.x = 0;
+    }
+    
+    if (pos.y < topBorderLimit)
+    {
+        pos.y = topBorderLimit;
+        _PlayerVelocity.y = 0;
+    }
+    else if (pos.y > bottomBorderLimit)
+    {
+        pos.y = bottomBorderLimit;
+        _PlayerVelocity.y = 0;
+    }
+    
+//    CCLOG("x = %f      y = %f", _PlayerVelocity.x, _PlayerVelocity.y);
+    _MainPlayer->SetObjectDir(_PlayerVelocity);
+    _MainPlayer->UpdatePosition();
+}
+
+void GameScene::update(float deltaT)                    // Method called every 0.0167 second
+{
+    if (_GameIsPaused == false)
+    {
+        updatePosition();
+    }
+}
+// New end
 
 void GameScene::PauseGame(Ref* pSender)
 {

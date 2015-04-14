@@ -1,7 +1,5 @@
 #include "HelloWorldScene.h"
-// New begin
 #include "GameScene.h"
-// New end
 
 USING_NS_CC;
 
@@ -52,7 +50,6 @@ bool HelloWorld::init()
     
     
     
-    // New begin
     // Button: start game
     auto startItem = MenuItemImage::create("buttonGamePlay.png",
                                            "buttonGamePlay.png",
@@ -65,20 +62,16 @@ bool HelloWorld::init()
     auto menuStart = Menu::create(startItem, NULL);
     menuStart->setPosition(Vec2::ZERO);
     this->addChild(menuStart, 1);
-    // New end
     
     return true;
 }
 
-// New begin
 void HelloWorld::startGame(cocos2d::Ref* pSender)
 {
     auto scene = GameScene::createScene();
     
     Director::getInstance()->pushScene(scene);
 }
-// New end
-
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {

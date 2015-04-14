@@ -9,6 +9,9 @@
 #include "cocos2d.h"
 #include <stdio.h>
 #include "GameConstants.h"
+// New begin
+#include "Player.h"
+// New end
 
 USING_NS_CC;
 
@@ -31,12 +34,24 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(GameScene);
     
+    // New begin
+    void CreateObjects();
+    virtual void onAcceleration(Acceleration *acc, Event *unused_event);
+    void updatePosition();
+    void update(float deltaT);
+    // New end
+    
     
 private:
     Size _VisibleSize;
     Vec2 _Origin;
     bool _GameIsPaused;
     Menu *_PauseMenu;
+    
+    // New begin
+    Player *_MainPlayer;
+    Vec2 _PlayerVelocity;
+    // New end
 };
 
 #endif /* defined(__Tanks__GameScene__) */
