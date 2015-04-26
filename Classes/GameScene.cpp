@@ -51,12 +51,10 @@ bool GameScene::init()
     this->addChild(menu, 1);
     
     InitDefaults();
-    // New begin
     CreateObjects();
     setAccelerometerEnabled(true);
     
     schedule(schedule_selector(GameScene::update), 0.0167);
-    // New end
     
     return true;
 }
@@ -66,9 +64,32 @@ void GameScene::InitDefaults()
     _GameIsPaused = false;
 }
 
-// New begin
 void GameScene::CreateObjects()
 {
+    // New begin
+    Sprite *grass = Sprite::create("Grass.png");
+    grass->setPosition(_VisibleSize.width / 2.0f, _VisibleSize.height / 2.0f);
+    grass->setScale(640.0f / _VisibleSize.width, 1136.0f / _VisibleSize.height);
+    this->addChild(grass, Z_ORDER_GRASS);
+    
+    
+    GameObject rock1(3, Vec2(_VisibleSize.width * 0.18f, _VisibleSize.height * 0.82f));
+    this->addChild(rock1._Spr, Z_ORDER_ROCK);
+    _Rocks.push_back(rock1);
+    
+    GameObject rock2(3, Vec2(_VisibleSize.width * 0.48f, _VisibleSize.height * 0.12f));
+    this->addChild(rock2._Spr, Z_ORDER_ROCK);
+    _Rocks.push_back(rock2);
+    
+    GameObject rock3(3, Vec2(_VisibleSize.width * 0.68f, _VisibleSize.height * 0.52f));
+    this->addChild(rock3._Spr, Z_ORDER_ROCK);
+    _Rocks.push_back(rock3);
+    
+    GameObject rock4(3, Vec2(_VisibleSize.width * 0.38f, _VisibleSize.height * 0.42f));
+    this->addChild(rock4._Spr, Z_ORDER_ROCK);
+    _Rocks.push_back(rock4);
+    // New end
+    
     _MainPlayer = new Player(1, Vec2(_VisibleSize.width * 0.12f, _VisibleSize.height * 0.12f));
     this->addChild(_MainPlayer->_Spr, Z_ORDER_PLAYER);
 }
@@ -141,6 +162,19 @@ void GameScene::updatePosition()                            // Update player pos
         _PlayerVelocity.y = 0;
     }
     
+    // Check rock collision
+    std::vector <GameObject>::iterator itRock;
+    for (itRock = _Rocks.begin(); itRock != _Rocks.end(); itRock++)
+    {
+        if (fabsf(pos.x - itRock->GetObjectPos().x) < 90.0f &&
+            fabsf(pos.y - itRock->GetObjectPos().y) < 84.0f)
+            _PlayerVelocity.x = 0;
+        
+        if (fabsf(pos.x - itRock->GetObjectPos().x) < 84.0f &&
+            fabsf(pos.y - itRock->GetObjectPos().y) < 90.0f)
+            _PlayerVelocity.y = 0;
+    }
+    
 //    CCLOG("x = %f      y = %f", _PlayerVelocity.x, _PlayerVelocity.y);
     _MainPlayer->SetObjectDir(_PlayerVelocity);
     _MainPlayer->UpdatePosition();
@@ -153,7 +187,6 @@ void GameScene::update(float deltaT)                    // Method called every 0
         updatePosition();
     }
 }
-// New end
 
 void GameScene::PauseGame(Ref* pSender)
 {

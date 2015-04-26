@@ -65,6 +65,8 @@
 		B65C25E51ADB291E00C02237 /* buttonPause.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E01ADB291E00C02237 /* buttonPause.png */; };
 		B65C25E61ADB291E00C02237 /* buttonRestart.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E11ADB291E00C02237 /* buttonRestart.png */; };
 		B65C25E71ADB291E00C02237 /* buttonResume.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E21ADB291E00C02237 /* buttonResume.png */; };
+		B68B6F431AED4AF80009263E /* Rock.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B6F421AED4AF80009263E /* Rock.png */; };
+		B68B6F451AED51A30009263E /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B6F441AED51A30009263E /* Grass.png */; };
 		B6D758141ADD0DC500C38130 /* Tank.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D758121ADD0DC500C38130 /* Tank.png */; };
 		B6D758151ADD0DC500C38130 /* TankEnemy.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D758131ADD0DC500C38130 /* TankEnemy.png */; };
 		B6D758181ADD0DFA00C38130 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6D758161ADD0DFA00C38130 /* GameObject.cpp */; };
@@ -168,6 +170,8 @@
 		B65C25E01ADB291E00C02237 /* buttonPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPause.png; sourceTree = "<group>"; };
 		B65C25E11ADB291E00C02237 /* buttonRestart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonRestart.png; sourceTree = "<group>"; };
 		B65C25E21ADB291E00C02237 /* buttonResume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonResume.png; sourceTree = "<group>"; };
+		B68B6F421AED4AF80009263E /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock.png; sourceTree = "<group>"; };
+		B68B6F441AED51A30009263E /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
 		B6D758121ADD0DC500C38130 /* Tank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tank.png; sourceTree = "<group>"; };
 		B6D758131ADD0DC500C38130 /* TankEnemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankEnemy.png; sourceTree = "<group>"; };
 		B6D758161ADD0DFA00C38130 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B68B6F441AED51A30009263E /* Grass.png */,
+				B68B6F421AED4AF80009263E /* Rock.png */,
 				B6D758121ADD0DC500C38130 /* Tank.png */,
 				B6D758131ADD0DC500C38130 /* TankEnemy.png */,
 				B65C25DE1ADB291E00C02237 /* buttonGamePlay.png */,
@@ -505,7 +511,9 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				B68B6F431AED4AF80009263E /* Rock.png in Resources */,
 				B65C25E41ADB291E00C02237 /* buttonMainMenu.png in Resources */,
+				B68B6F451AED51A30009263E /* Grass.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				B6D758141ADD0DC500C38130 /* Tank.png in Resources */,
