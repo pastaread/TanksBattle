@@ -49,6 +49,13 @@ bool HelloWorld::init()
     this->addChild(menu, 1);
     
     
+    // Background
+    auto backg = Sprite::create("Ground.png");
+    backg->setPosition(visibleSize.width * 0.5f, visibleSize.height * 0.5f);
+    backg->setScale(visibleSize.width / 1242.0f, visibleSize.height / 2208.0f);
+    this->addChild(backg);
+    
+    
     
     // Button: start game
     auto startItem = MenuItemImage::create("buttonGamePlay.png",

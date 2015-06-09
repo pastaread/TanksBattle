@@ -65,10 +65,15 @@
 		B65C25E51ADB291E00C02237 /* buttonPause.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E01ADB291E00C02237 /* buttonPause.png */; };
 		B65C25E61ADB291E00C02237 /* buttonRestart.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E11ADB291E00C02237 /* buttonRestart.png */; };
 		B65C25E71ADB291E00C02237 /* buttonResume.png in Resources */ = {isa = PBXBuildFile; fileRef = B65C25E21ADB291E00C02237 /* buttonResume.png */; };
-		B68B6F431AED4AF80009263E /* Rock.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B6F421AED4AF80009263E /* Rock.png */; };
-		B68B6F451AED51A30009263E /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = B68B6F441AED51A30009263E /* Grass.png */; };
-		B6D758141ADD0DC500C38130 /* Tank.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D758121ADD0DC500C38130 /* Tank.png */; };
-		B6D758151ADD0DC500C38130 /* TankEnemy.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D758131ADD0DC500C38130 /* TankEnemy.png */; };
+		B6C7F1E61B2779B500AC4516 /* barrelGrey_sde_rust.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1DE1B2779B500AC4516 /* barrelGrey_sde_rust.png */; };
+		B6C7F1E71B2779B500AC4516 /* barrelGrey_side.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1DF1B2779B500AC4516 /* barrelGrey_side.png */; };
+		B6C7F1E81B2779B500AC4516 /* bulletGreen_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1E01B2779B500AC4516 /* bulletGreen_outline.png */; };
+		B6C7F1E91B2779B500AC4516 /* bulletRed_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1E11B2779B500AC4516 /* bulletRed_outline.png */; };
+		B6C7F1EA1B2779B500AC4516 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1E21B2779B500AC4516 /* Ground.png */; };
+		B6C7F1EB1B2779B500AC4516 /* sandbagBeige.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1E31B2779B500AC4516 /* sandbagBeige.png */; };
+		B6C7F1EC1B2779B500AC4516 /* TankG.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1E41B2779B500AC4516 /* TankG.png */; };
+		B6C7F1ED1B2779B500AC4516 /* TankR.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7F1E51B2779B500AC4516 /* TankR.png */; };
+		B6C7F1F01B2781C100AC4516 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6C7F1EE1B2781C100AC4516 /* Bullet.cpp */; };
 		B6D758181ADD0DFA00C38130 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6D758161ADD0DFA00C38130 /* GameObject.cpp */; };
 		B6D7581B1ADD0EC200C38130 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6D758191ADD0EC200C38130 /* Player.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -170,10 +175,16 @@
 		B65C25E01ADB291E00C02237 /* buttonPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPause.png; sourceTree = "<group>"; };
 		B65C25E11ADB291E00C02237 /* buttonRestart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonRestart.png; sourceTree = "<group>"; };
 		B65C25E21ADB291E00C02237 /* buttonResume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonResume.png; sourceTree = "<group>"; };
-		B68B6F421AED4AF80009263E /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock.png; sourceTree = "<group>"; };
-		B68B6F441AED51A30009263E /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
-		B6D758121ADD0DC500C38130 /* Tank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tank.png; sourceTree = "<group>"; };
-		B6D758131ADD0DC500C38130 /* TankEnemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankEnemy.png; sourceTree = "<group>"; };
+		B6C7F1DE1B2779B500AC4516 /* barrelGrey_sde_rust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrelGrey_sde_rust.png; sourceTree = "<group>"; };
+		B6C7F1DF1B2779B500AC4516 /* barrelGrey_side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrelGrey_side.png; sourceTree = "<group>"; };
+		B6C7F1E01B2779B500AC4516 /* bulletGreen_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletGreen_outline.png; sourceTree = "<group>"; };
+		B6C7F1E11B2779B500AC4516 /* bulletRed_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletRed_outline.png; sourceTree = "<group>"; };
+		B6C7F1E21B2779B500AC4516 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
+		B6C7F1E31B2779B500AC4516 /* sandbagBeige.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandbagBeige.png; sourceTree = "<group>"; };
+		B6C7F1E41B2779B500AC4516 /* TankG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankG.png; sourceTree = "<group>"; };
+		B6C7F1E51B2779B500AC4516 /* TankR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankR.png; sourceTree = "<group>"; };
+		B6C7F1EE1B2781C100AC4516 /* Bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bullet.cpp; sourceTree = "<group>"; };
+		B6C7F1EF1B2781C100AC4516 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		B6D758161ADD0DFA00C38130 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
 		B6D758171ADD0DFA00C38130 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		B6D758191ADD0EC200C38130 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -300,10 +311,14 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B68B6F441AED51A30009263E /* Grass.png */,
-				B68B6F421AED4AF80009263E /* Rock.png */,
-				B6D758121ADD0DC500C38130 /* Tank.png */,
-				B6D758131ADD0DC500C38130 /* TankEnemy.png */,
+				B6C7F1DE1B2779B500AC4516 /* barrelGrey_sde_rust.png */,
+				B6C7F1DF1B2779B500AC4516 /* barrelGrey_side.png */,
+				B6C7F1E01B2779B500AC4516 /* bulletGreen_outline.png */,
+				B6C7F1E11B2779B500AC4516 /* bulletRed_outline.png */,
+				B6C7F1E21B2779B500AC4516 /* Ground.png */,
+				B6C7F1E31B2779B500AC4516 /* sandbagBeige.png */,
+				B6C7F1E41B2779B500AC4516 /* TankG.png */,
+				B6C7F1E51B2779B500AC4516 /* TankR.png */,
 				B65C25DE1ADB291E00C02237 /* buttonGamePlay.png */,
 				B65C25DF1ADB291E00C02237 /* buttonMainMenu.png */,
 				B65C25E01ADB291E00C02237 /* buttonPause.png */,
@@ -333,6 +348,8 @@
 				B6D758171ADD0DFA00C38130 /* GameObject.h */,
 				B6D758191ADD0EC200C38130 /* Player.cpp */,
 				B6D7581A1ADD0EC200C38130 /* Player.h */,
+				B6C7F1EE1B2781C100AC4516 /* Bullet.cpp */,
+				B6C7F1EF1B2781C100AC4516 /* Bullet.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -485,11 +502,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C7F1EC1B2779B500AC4516 /* TankG.png in Resources */,
 				B65C25E51ADB291E00C02237 /* buttonPause.png in Resources */,
+				B6C7F1EA1B2779B500AC4516 /* Ground.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				B6C7F1ED1B2779B500AC4516 /* TankR.png in Resources */,
+				B6C7F1E81B2779B500AC4516 /* bulletGreen_outline.png in Resources */,
 				B65C25E31ADB291E00C02237 /* buttonGamePlay.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				B6C7F1EB1B2779B500AC4516 /* sandbagBeige.png in Resources */,
+				B6C7F1E91B2779B500AC4516 /* bulletRed_outline.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
@@ -499,7 +522,8 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
-				B6D758151ADD0DC500C38130 /* TankEnemy.png in Resources */,
+				B6C7F1E71B2779B500AC4516 /* barrelGrey_side.png in Resources */,
+				B6C7F1E61B2779B500AC4516 /* barrelGrey_sde_rust.png in Resources */,
 				B65C25E61ADB291E00C02237 /* buttonRestart.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -511,12 +535,9 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
-				B68B6F431AED4AF80009263E /* Rock.png in Resources */,
 				B65C25E41ADB291E00C02237 /* buttonMainMenu.png in Resources */,
-				B68B6F451AED51A30009263E /* Grass.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
-				B6D758141ADD0DC500C38130 /* Tank.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D7581B1ADD0EC200C38130 /* Player.cpp in Sources */,
+				B6C7F1F01B2781C100AC4516 /* Bullet.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

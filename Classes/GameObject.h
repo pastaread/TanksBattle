@@ -21,7 +21,7 @@ public:
     Sprite *_Spr;
     
 protected:
-    uint _Type;             // 1 = player, 2 = enemy, 3 = rock
+    uint _Type;             // 1 = player, 2 = enemy, 3 = rock, 4 = bullet player
     Vec2 _Pos;
 };
 

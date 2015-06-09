@@ -19,9 +19,11 @@ public:
     void SetObjectDir(Vec2 dir);
     Vec2 GetObjectDir();
     void UpdatePosition();
+    Vec2 GetBulletDir();
     
 private:
     Vec2 _DirectionVec;
+    Vec2 _BulletDirection;
 };
 
 #endif /* defined(__TanksBattle__Player__) */

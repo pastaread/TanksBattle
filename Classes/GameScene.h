@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "GameConstants.h"
 #include "Player.h"
+#include "Bullet.h"
 
 USING_NS_CC;
 
@@ -24,6 +25,10 @@ public:
     
     void InitDefaults();
     
+    // New begin
+    void setTouchEnabled(bool enabled);
+    // New end
+    
     void PauseGame(Ref* pSender);
     void ResumeGame(Ref* pSender);
     void RestartGame(Ref* pSender);
@@ -37,6 +42,11 @@ public:
     void updatePosition();
     void update(float deltaT);
     
+    // New begin
+    bool onTouchBegan(Touch *pTouch, Event *pEvent);
+    void onTouchEnded(Touch *pTouch, Event *pEvent);
+    // New end
+    
     
 private:
     Size _VisibleSize;
@@ -44,11 +54,16 @@ private:
     bool _GameIsPaused;
     Menu *_PauseMenu;
     
+    // New begin
+    EventListenerTouchOneByOne *_touchListener;
+    // New end
+    
     Player *_MainPlayer;
     Vec2 _PlayerVelocity;
     
     // New begin
     std::vector<GameObject> _Rocks;
+    std::vector<Bullet> _BulletsPlayer;
     // New end
 };
 

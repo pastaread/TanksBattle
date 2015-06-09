@@ -54,6 +54,10 @@ bool GameScene::init()
     CreateObjects();
     setAccelerometerEnabled(true);
     
+    // New begin
+    setTouchEnabled(true);
+    // New end
+    
     schedule(schedule_selector(GameScene::update), 0.0167);
     
     return true;
@@ -64,13 +68,31 @@ void GameScene::InitDefaults()
     _GameIsPaused = false;
 }
 
+void GameScene::setTouchEnabled(bool enabled)
+{
+    if (enabled)
+    {
+        _touchListener = EventListenerTouchOneByOne::create();
+        _touchListener->retain();
+        _touchListener->onTouchBegan = CC_CALLBACK_2(GameScene::onTouchBegan, this);
+        _touchListener->onTouchEnded = CC_CALLBACK_2(GameScene::onTouchEnded, this);
+        _eventDispatcher->addEventListenerWithSceneGraphPriority(_touchListener, this);
+    }
+    else if (!enabled)
+    {
+        _eventDispatcher->removeEventListener(_touchListener);
+        _touchListener->release();
+        _touchListener = nullptr;
+    }
+}
+
 void GameScene::CreateObjects()
 {
     // New begin
-    Sprite *grass = Sprite::create("Grass.png");
-    grass->setPosition(_VisibleSize.width / 2.0f, _VisibleSize.height / 2.0f);
-    grass->setScale(640.0f / _VisibleSize.width, 1136.0f / _VisibleSize.height);
-    this->addChild(grass, Z_ORDER_GRASS);
+    auto backg = Sprite::create("Ground.png");
+    backg->setPosition(_VisibleSize.width * 0.5f, _VisibleSize.height * 0.5f);
+    backg->setScale(_VisibleSize.width / 1242.0f, _VisibleSize.height / 2208.0f);
+    this->addChild(backg, Z_ORDER_GROUND);
     
     
     GameObject rock1(3, Vec2(_VisibleSize.width * 0.18f, _VisibleSize.height * 0.82f));
@@ -166,19 +188,41 @@ void GameScene::updatePosition()                            // Update player pos
     std::vector <GameObject>::iterator itRock;
     for (itRock = _Rocks.begin(); itRock != _Rocks.end(); itRock++)
     {
-        if (fabsf(pos.x - itRock->GetObjectPos().x) < 90.0f &&
-            fabsf(pos.y - itRock->GetObjectPos().y) < 84.0f)
+        if (fabsf(pos.x - itRock->GetObjectPos().x) < 80.0f &&
+            fabsf(pos.y - itRock->GetObjectPos().y) < 74.0f)
             _PlayerVelocity.x = 0;
         
-        if (fabsf(pos.x - itRock->GetObjectPos().x) < 84.0f &&
-            fabsf(pos.y - itRock->GetObjectPos().y) < 90.0f)
+        if (fabsf(pos.x - itRock->GetObjectPos().x) < 74.0f &&
+            fabsf(pos.y - itRock->GetObjectPos().y) < 80.0f)
             _PlayerVelocity.y = 0;
     }
     
 //    CCLOG("x = %f      y = %f", _PlayerVelocity.x, _PlayerVelocity.y);
     _MainPlayer->SetObjectDir(_PlayerVelocity);
     _MainPlayer->UpdatePosition();
+    
+    for (int i = 0; i < _BulletsPlayer.size(); i++)
+    {
+        _BulletsPlayer[i].UpdatePosition();
+    }
 }
+
+// New begin
+bool GameScene::onTouchBegan(Touch *pTouch, Event *pEvent)
+{
+    Bullet bullet(4,
+                  Vec2(_MainPlayer->GetObjectPos().x, _MainPlayer->GetObjectPos().y),
+                  _MainPlayer->GetBulletDir());
+    this->addChild(bullet._Spr, Z_ORDER_BULLET);
+    _BulletsPlayer.push_back(bullet);
+    
+    return true;
+}
+
+void GameScene::onTouchEnded(Touch *pTouch, Event *pEvent)
+{
+}
+// New end
 
 void GameScene::update(float deltaT)                    // Method called every 0.0167 second
 {
